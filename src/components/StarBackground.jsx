@@ -1,27 +1,11 @@
 import { useState, useEffect } from "react";
 
 //id, size, x, y, opacity, animationDuration
-type Star = {
-  id: number;
-  size: number;
-  x: number;
-  y: number;
-  opacity: number;
-  animationDuration: number;
-};
 //id, size, x, y, deley, animationDuration
-type Meteors = {
-  id: number;
-  size: number;
-  x: number;
-  y: number;
-  delay: number;
-  animationDuration: number;
-};
 
 export const StarBackground = () => {
-  const [stars, setStars] = useState<Star[]>([]); // 👈 quan trọng nè
-  const [meteors, setMeteors] = useState<Meteors[]>([]);
+  const [stars, setStars] = useState([]); // 👈 quan trọng nè
+  const [meteors, setMeteors] = useState([]);
   useEffect(() => {
     generateStars();
     generateMeteors();
